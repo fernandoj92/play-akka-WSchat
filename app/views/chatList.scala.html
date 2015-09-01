@@ -1,0 +1,45 @@
+@()(implicit flash: Flash)
+
+@import views.html.elements.flashMessages
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clustered chat</title>
+        <meta charset="utf-8">
+        <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+        <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+        <script type='text/javascript' src='@routes.Assets.versioned("javascripts/main.js")'></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            @flashMessages(flash)
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-md-offset-6">
+                    <h1 class="text-center login-title">Clustered chat demo</h1>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="center">Chat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="center"><a href="/chats/Prueba">Prueba</a></td>
+                            </tr>
+                            <tr>
+                                <td class="center"><a href="/chats/Juegos">Juegos</a></td>
+                            </tr>
+                            <tr>
+                                <td class="center"><a href="/chats/Peliculas">Peliculas</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
